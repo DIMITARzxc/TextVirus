@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Sockets;
 
 namespace VirusServer
 {
@@ -14,6 +15,7 @@ namespace VirusServer
     {
         public string Action;
         public bool moreThanOneParametr;
+        public Socket socket;
         public SendMenu()
         {
             InitializeComponent();
@@ -33,16 +35,25 @@ namespace VirusServer
                     break;
                 case "Rename":
                     FirstParametrLabel.Text = "Path";
+                    SecondParametrLabel.Text = "Name";
                     moreThanOneParametr = true;
                     break;
                 default:
                     break;
             }
+            if (!moreThanOneParametr)
+            {
+                SecondParametrLabel.Hide();
+                SecondParametrTextBox.Hide();
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void SendButton_Click(object sender, EventArgs e)
         {
-
+            string command = Action.ToLower();
+            string request = command + "|"+FirstParametrTextBox.Text+"|"+ SecondParametrTextBox.Text;
+            byte[] buffer = Encoding.UTF8.GetBytes(request);
+            socket.Send(buffer);
         }
     }
 }

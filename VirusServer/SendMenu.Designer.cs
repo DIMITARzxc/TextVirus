@@ -43,6 +43,7 @@
             this.SendButton.TabIndex = 0;
             this.SendButton.Text = "Send";
             this.SendButton.UseVisualStyleBackColor = true;
+            this.SendButton.Click += new System.EventHandler(this.SendButton_Click);
             // 
             // FirstParametrLabel
             // 
@@ -52,7 +53,7 @@
             this.FirstParametrLabel.Size = new System.Drawing.Size(68, 13);
             this.FirstParametrLabel.TabIndex = 1;
             this.FirstParametrLabel.Text = "FirstParametr";
-            this.FirstParametrLabel.Click += new System.EventHandler(this.label1_Click);
+           
             // 
             // SecondParametrLabel
             // 
