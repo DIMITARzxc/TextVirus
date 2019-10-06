@@ -48,9 +48,19 @@ namespace VirusServer
 
         private void ClientTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void ClientTable_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+        }
+
+        private void ClientTable_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
             Socket current = ClientList[e.RowIndex];
             ClientMenu clientMenu = new ClientMenu();
             clientMenu.socket = current;
+            clientMenu.Show();
         }
     }
 }

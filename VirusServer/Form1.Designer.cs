@@ -39,7 +39,9 @@
             this.ClientTable.Name = "ClientTable";
             this.ClientTable.Size = new System.Drawing.Size(398, 304);
             this.ClientTable.TabIndex = 0;
+            this.ClientTable.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClientTable_CellContentDoubleClick);
             this.ClientTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClientTable_CellDoubleClick);
+            this.ClientTable.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ClientTable_CellMouseDoubleClick);
             // 
             // Form1
             // 
