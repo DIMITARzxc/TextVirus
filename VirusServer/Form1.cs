@@ -33,15 +33,21 @@ namespace VirusServer
             refreshThread = new Thread(WaitForConnect);
             refreshThread.Start();
         }
-        public static void WaitForConnect()
+        public  void WaitForConnect()
         {
             Socket client = socket.Accept();
             ClientList.Add(client);
+            ClientTable.DataSource = ClientList;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             refreshThread.Abort();
+        }
+
+        private void ClientTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Socket current = ClientList[e.RowIndex];
         }
     }
 }
