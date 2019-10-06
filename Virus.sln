@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virus", "Virus\Virus.csproj", "{4DA7C14F-02B1-4C3D-A6A6-623215D04E04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirusServer", "VirusServer\VirusServer.csproj", "{3EFFCD4C-88B4-4A86-8546-478D6589A8EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4DA7C14F-02B1-4C3D-A6A6-623215D04E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DA7C14F-02B1-4C3D-A6A6-623215D04E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DA7C14F-02B1-4C3D-A6A6-623215D04E04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EFFCD4C-88B4-4A86-8546-478D6589A8EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EFFCD4C-88B4-4A86-8546-478D6589A8EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EFFCD4C-88B4-4A86-8546-478D6589A8EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EFFCD4C-88B4-4A86-8546-478D6589A8EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
